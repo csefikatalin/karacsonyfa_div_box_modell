@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karácsonyfa</title>
+
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+      .snowman {
+        position: relative;
+        width: 120px;
+        margin: 50px auto;
+      }
+
+      /* Test */
+      .bottom {
+        width: 120px;
+        height: 120px;
+        background: white;
+        border-radius: 50%;
+        margin:-10px auto;
+      }
+
+      .body {
+        width: 90px;
+        height: 90px;
+        background: white;
+        border-radius: 50%;
+        margin: -15px auto 0 auto;
+      }
+
+      .head {
+        width: 60px;
+        height: 60px;
+        background: white;
+        border-radius: 50%;
+        margin: -30px auto 0 auto;
+      }
+
+      /* Szemek */
+      .eye {
+        width: 8px;
+        height: 8px;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+      }
+
+      .eye.left {
+        left: 35px;
+      }
+      .eye.right {
+        right: 35px;
+      }
+
+      /* Hóorr */
+      .nose {
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 15px solid orange;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+      }
+
+      /* Kalap */
+      .hat {
+        width: 50px;
+        height: 20px;
+        background: black;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .hat::before {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 6px;
+        background: black;
+        top: 18px;
+        left: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="snowman">
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="bottom"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="hat"></div>
+    </div>
+  </body>
+</html>
